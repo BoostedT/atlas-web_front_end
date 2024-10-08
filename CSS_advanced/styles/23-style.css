@@ -582,7 +582,7 @@
   }
 
   .footer-address {
-    --text-color: var(--color-white);
+    --text-color: var(--text-color);
   }
 
   .social-link {
