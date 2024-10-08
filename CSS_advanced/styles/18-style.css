@@ -516,6 +516,7 @@ html {
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
     --nav-item-link-hover: var(--color-black);
+    --nav-item-margin: 3rem 0;
   }
   
   .section-header-align {
