@@ -432,9 +432,8 @@ html {
 
   .nav .nav-link {
     display: block;
-    padding: calc(var(--root-padding) / 2) var(--root-padding);
+    padding: calc(0.5 * var(--root-padding)) calc(var(--root-padding));
     color: var(--nav-item-link-hover);
-    
   }
 
 
