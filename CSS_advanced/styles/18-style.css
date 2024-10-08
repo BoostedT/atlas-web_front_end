@@ -432,7 +432,7 @@ html {
 
   .nav .nav-link {
     display: block;
-    padding: calc(0.5 * var(--root-padding)) calc(var(--root-padding));
+    padding: 0.5rem 1rem;
     color: var(--nav-item-link-hover);
   }
 
@@ -512,7 +512,7 @@ html {
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: calc(var(--root-padding) / 4);
+    --nav-item-letter-spacing: 0.4rem;
     --nav-item-display: inline-block;
     --nav-item-link-hover: var(--color-black);
   }
