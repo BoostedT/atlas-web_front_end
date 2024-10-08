@@ -712,7 +712,7 @@
     z-index: -1;
   }
 
-  .card-work:hover .card-image img{
+  .card-work:hover .card-image{
     transform: scale(1.2);
   }
 
