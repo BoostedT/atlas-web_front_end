@@ -583,17 +583,17 @@
     fill: var(--text-color);
   }
 
-  .card-testimonal{
+  .card-testimonial{
     text-align: center;
   }
 
-  .card-testimonal .card-avatar{
+  .card-testimonial .card-avatar{
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
   }
 
-  .card-testimonal .card-quote cite{
+  .card-testimonial .card-quote cite{
     display: block;
     padding-top: 1rem;
     color: var(--color-primary);
