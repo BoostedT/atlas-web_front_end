@@ -475,13 +475,13 @@ html {
     margin: 0;
   }
 
-  .ul.row {
+  ul.row {
     margin: 0;
     padding: none;
     list-style: none;
   }
 
-  .ul.footer {
+  .footer ul {
     text-align: right;
   }
 
