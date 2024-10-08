@@ -446,6 +446,10 @@ html {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .footer{
+    padding: var(--footer-padding);
+  }
   
   :root {
     --color-primary: #d73953;
