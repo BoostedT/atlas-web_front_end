@@ -436,7 +436,7 @@ html {
   }
   
   .nav .nav-link:hover {
-    color: var(--color-primary);
+    color: var(--nav-item-link-hover);
   }
   .section {
     padding: var(--section-padding);
@@ -517,6 +517,7 @@ html {
     --nav-item-display: inline-block;
     --nav-item-link-hover: var(--color-black);
     --nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-primary);
   }
   
   .section-header-align {
