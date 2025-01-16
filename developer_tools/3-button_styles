@@ -1,12 +1,1 @@
-background-color rgba(0, 0, 0, 0)
-border-bottom-color rgb(248, 249, 250)
-border-bottom-left-radius 8px
-border-bottom-right-radius 8px
-border-bottom-style solid
-border-bottom-width 2px
-border-image-outset 0
-border-image-repeat stretch
-border-image-slice 100%
-border-image-source none
-border-image-width 1
-border-left-color rgb(248, 249, 250)
+padding: 1rem 1.75rem;
