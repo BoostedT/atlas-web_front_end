@@ -3,7 +3,9 @@ $padding: 0;
 
 body {
     margin: $margin;
-    padding: $padding;}
-body p {
-    margin: 10px;
+    padding: $padding;
+
+    p {
+        margin: 10px;
+    }
 }
