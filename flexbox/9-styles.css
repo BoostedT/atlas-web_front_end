@@ -370,7 +370,10 @@
   }
   
   /* Section SERVICES
-      ============================= *
+      ============================= */
+      .section-services .row {
+        justify-content: center;
+      }
 
    /* Section ABOUT US
       ============================= */
