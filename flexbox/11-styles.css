@@ -501,11 +501,11 @@
 /* Section HERO (article)
     ============================= */
     .hero-article {
-      background-position: 50% 0;
       background-size: 150rem 100rem;
+      background-position: 50% 0;
     }
 
-    .hero-article::before {
+    &::before {
       content: '';
       position: absolute;
       top: 0;
