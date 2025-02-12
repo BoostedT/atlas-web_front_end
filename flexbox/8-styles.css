@@ -361,7 +361,7 @@
     background-color: #010101;
   }
   
-  .section-hero.section-inner {
+  .section-hero .section-inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
