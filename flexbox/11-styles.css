@@ -505,7 +505,7 @@
       background-position: 50% 0;
     }
 
-    &::before {
+    .hero-article::before {
       content: '';
       position: absolute;
       top: 0;
