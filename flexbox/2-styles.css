@@ -368,6 +368,12 @@
   .section-hero .section-inner {
     padding: 10rem 40rem 2rem 0;
   }
+
+  /* Section Latest news ============================= */
+
+  .section-latest-news .row {
+    flex-direction: row-reverse;
+  }
   
   /*** 4. CARD ***/
   
@@ -441,11 +447,6 @@
   
   .card-work:hover .card-title {
     opacity: 1;
-  }
-  /* Section Latest news ============================= */
-
-  .section-latest-news .row {
-    flex-direction: row-reverse;
   }
   
   /* Card SERVICES
