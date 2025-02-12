@@ -570,7 +570,7 @@ ul.row {
   display: inline;
 }
 
-.tag-list li + li::after {
+.tag-list li::after {
   content: ", ";
 }
 .tag-list li:last-child::after {
