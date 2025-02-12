@@ -1,2 +1,2 @@
-$hello : "Hello, World";
-@debug "Hello, World";
+$hello : "Hello World";
+@debug $hello;
