@@ -1,4 +1,4 @@
-@import "11-variables";
+@import '11-variables.scss';
 
 // Loop through the list of names and create a class for each one
 @each $name in $list-names {
