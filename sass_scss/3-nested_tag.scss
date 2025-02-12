@@ -1,12 +1,9 @@
 $margin: 0;
 $padding: 0;
-$marginp: 10px;
 
 body {
     margin: $margin;
-    padding: $padding;
-}
-
+    padding: $padding;}
 body p {
-    margin: $marginp;
+    margin: 10px;
 }
