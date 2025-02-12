@@ -1,8 +1,8 @@
-$list-names: julien, john, sam, damian;
+@import "11-variables";
 
 // Loop through the list of names and create a class for each one
 @each $name in $list-names {
     .photo-#{$name} {
-        background-image: url('photos/#{$name}.jpg') no-repeat;
+        background: image-url('photos/#{$name}.jpg') no-repeat;
     }
 }
