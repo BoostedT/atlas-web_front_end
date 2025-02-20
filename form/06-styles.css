@@ -177,7 +177,7 @@ template {
 
   --text-color: var(--color-black);
   --valid-color: var(--color-green);
-  --invalid-color: var(--color-red);
+  --error-color: var(--color-red);
 
   --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
