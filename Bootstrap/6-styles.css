@@ -1,0 +1,54 @@
+/* btn-primary styling */
+.btn-primary {
+  background-color: #E0003C;
+  border-color: #E0003C;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #BC1340;
+  border-color: #BC1340;
+}
+
+/* btn-outline-primary styling */
+.btn-outline-primary {
+  color: #E0003C;
+  border-color: #E0003C;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  color: #fff;
+  background-color: #E0003C;
+  border-color: #BC1340;
+}
+
+/* All links default + on hover/focus */
+a,
+a:hover,
+a:focus {
+  color: #E0003C;
+}
+
+/* Cards and headers rounded and colored */
+.card {
+  border-color: #E0003C;
+  border-radius: 1rem;
+}
+.card-header {
+  background-color: #E0003C;
+  color: white;
+  border-color: #E0003C;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card-footer {
+  border-color: #E0003C;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Muted text override */
+.text-muted {
+  color: #8C8C8C !important;
+}
