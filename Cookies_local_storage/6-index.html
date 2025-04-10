@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      cursor: pointer;
+      padding: 6px 0;
+    }
+    li:hover {
+      background-color: #f0f0f0;
+    }
+    p {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+  function isSessionStorageSupported() {
+    try {
+      sessionStorage.setItem('test', 'test');
+      sessionStorage.removeItem('test');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function addItemToCart(item) {
+    sessionStorage.setItem(item, 'true');
+    alert(`${item} added to cart!`);
+  }
+
+  function createStore() {
+    const ul = document.createElement('ul');
+
+    availableItems.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      li.onclick = () => addItemToCart(item);
+      ul.appendChild(li);
+    });
+
+    document.body.appendChild(ul);
+  }
+
+  function displayCart() {
+    let count = 0;
+
+    for (const item of availableItems) {
+      if (sessionStorage.getItem(item)) {
+        count++;
+      }
+    }
+
+    if (count > 0) {
+      const p = document.createElement('p');
+      p.textContent = `You previously had ${count} item(s) in your cart.`;
+      document.body.appendChild(p);
+    }
+  }
+
+  function init() {
+    if (!isSessionStorageSupported()) {
+      alert('Sorry, your browser does not support Web storage. Try again with a better one');
+    } else {
+      createStore();
+      displayCart();
+    }
+  }
+
+  window.onload = init;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 8</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    li {
+      cursor: pointer;
+      margin: 5px 0;
+    }
+    li:hover {
+      background-color: #f0f0f0;
+    }
+    .remove-link {
+      color: red;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+  function isSessionStorageSupported() {
+    try {
+      sessionStorage.setItem('test', 'test');
+      sessionStorage.removeItem('test');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function getCartFromStorage() {
+    const cart = sessionStorage.getItem('cart');
+    return cart ? JSON.parse(cart) : {};
+  }
+
+  function addItemToCart(item) {
+    const cart = getCartFromStorage();
+    cart[item] = (cart[item] || 0) + 1;
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+  }
+
+  function removeItemfromCart(item) {
+    const cart = getCartFromStorage();
+    if (cart[item]) {
+      delete cart[item];
+      sessionStorage.setItem('cart', JSON.stringify(cart));
+    }
+    displayCart();
+  }
+
+  function clearCart() {
+    sessionStorage.removeItem('cart');
+    displayCart();
+  }
+
+  function createStore() {
+    const storeHeader = document.createElement('h2');
+    storeHeader.textContent = 'Available products:';
+    document.body.appendChild(storeHeader);
+
+    const ul = document.createElement('ul');
+    availableItems.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      li.onclick = () => addItemToCart(item);
+      ul.appendChild(li);
+    });
+
+    document.body.appendChild(ul);
+  }
+
+  function displayCart() {
+    let cartHeader = document.getElementById('cart-header');
+    if (!cartHeader) {
+      cartHeader = document.createElement('h2');
+      cartHeader.id = 'cart-header';
+      cartHeader.textContent = 'Your cart:';
+      document.body.appendChild(cartHeader);
+    }
+
+    let cartDiv = document.getElementById('cart');
+    if (!cartDiv) {
+      cartDiv = document.createElement('div');
+      cartDiv.id = 'cart';
+      document.body.appendChild(cartDiv);
+    }
+
+    cartDiv.innerHTML = ''; // Clear previous content
+    updateCart();
+  }
+
+  function updateCart() {
+    const cart = getCartFromStorage();
+    const cartDiv = document.getElementById('cart');
+    const ul = document.createElement('ul');
+
+    // Add "Clear my cart"
+    const clearItem = document.createElement('li');
+    clearItem.textContent = 'Clear my cart';
+    clearItem.style.cursor = 'pointer';
+    clearItem.style.fontWeight = 'bold';
+    clearItem.onclick = clearCart;
+    ul.appendChild(clearItem);
+
+    const keys = Object.keys(cart);
+    if (keys.length === 0) {
+      const empty = document.createElement('li');
+      empty.textContent = 'Your cart is empty';
+      ul.appendChild(empty);
+    } else {
+      keys.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item} x ${cart[item]}`;
+
+        const remove = document.createElement('span');
+        remove.textContent = ' (remove)';
+        remove.className = 'remove-link';
+        remove.onclick = () => removeItemfromCart(item);
+
+        li.appendChild(remove);
+        ul.appendChild(li);
+      });
+    }
+
+    cartDiv.appendChild(ul);
+  }
+
+  function init() {
+    if (!isSessionStorageSupported()) {
+      alert('Sorry, your browser does not support Web storage. Try again with a better one');
+    } else {
+      createStore();
+      displayCart();
+    }
+  }
+
+  window.onload = init;
+</script>
+
+</body>
+</html>
