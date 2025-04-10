@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h1,
+    h2 {
+      font-weight: bold;
+    }
+
+    input {
+      margin-right: 5px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Login to the website</h1>
+  <input type="text" id="firstname" placeholder="Firstname">
+  <input type="email" id="email" placeholder="Email">
+  <button onclick="setCookies()">Log me in</button>
+
+  <h2>Cookies</h2>
+  <button onclick="showCookies()">Show the cookies</button>
+
+  <script>
+    function setCookies() {
+      const firstname = document.getElementById('firstname').value;
+      const email = document.getElementById('email').value;
+
+      document.cookie = `firstname=${firstname}; path=/`;
+      document.cookie = `email=${email}; path=/`;
+    }
+
+    function showCookies() {
+      const p = document.createElement('p');
+      p.innerHTML = `Cookies: ${document.cookie}`;
+      document.body.appendChild(p);
+    }
+
+    window.setCookies = setCookies;
+    window.showCookies = showCookies;
+  </script>
+</body>
+
+</html>
