@@ -1,4 +1,4 @@
-# 🍪 Cookies & Session Storage — JavaScript Project
+# 🍪 Cookies Atlas
 
 This project is a collection of small web applications that demonstrate how to use cookies, localStorage, and sessionStorage in the browser using only vanilla JavaScript. It is served using Webpack Dev Server.
 
